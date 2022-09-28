@@ -1,0 +1,6 @@
+<div class="alert alert-info" *ngIf="model | async as m">
+  <span
+    >You have {{ m.total }} items on your list. {{ m.purchased }} are purchased,
+    {{ m.unpurchased }} are unpurchased.</span
+  >
+</div>

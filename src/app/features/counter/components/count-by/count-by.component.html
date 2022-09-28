@@ -1,0 +1,31 @@
+<div
+  class="btn-group"
+  role="group"
+  aria-label="Set Count By"
+  *ngIf="by$ | async as by"
+>
+  <button
+    [disabled]="by === 1"
+    (click)="setCountBy(1)"
+    type="button"
+    class="btn btn-primary"
+  >
+    Count By 1
+  </button>
+  <button
+    [disabled]="by === 3"
+    (click)="setCountBy(3)"
+    type="button"
+    class="btn btn-primary"
+  >
+    Count By 3
+  </button>
+  <button
+    [disabled]="by === 5"
+    (click)="setCountBy(5)"
+    type="button"
+    class="btn btn-primary"
+  >
+    Count By 5
+  </button>
+</div>

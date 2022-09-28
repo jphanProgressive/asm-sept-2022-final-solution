@@ -1,0 +1,14 @@
+<h1>The List-O-Rama!</h1>
+<ul class="list-unstyled">
+  <li *ngFor="let item of model">
+    <button
+      (click)="markPurchased(item)"
+      *ngIf="item.purchased === false"
+      class="btn btn-danger btn-sm"
+    >
+      X</button
+    ><span [ngClass]="{ purchased: item.purchased }">{{
+      item.description
+    }}</span>
+  </li>
+</ul>

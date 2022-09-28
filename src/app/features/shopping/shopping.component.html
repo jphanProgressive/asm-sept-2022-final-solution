@@ -1,0 +1,8 @@
+<h2>Shopping List!</h2>
+<div>
+  <app-list-summary> </app-list-summary>
+</div>
+<section>
+  <app-entry (itemAdded)="addItemToList($event)"></app-entry>
+  <app-list [model]="shoppingList | async"></app-list>
+</section>

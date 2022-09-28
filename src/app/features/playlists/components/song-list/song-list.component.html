@@ -1,0 +1,21 @@
+<div *ngIf="songs$ | async as songs" data-test-id="playlist-list">
+  <div *ngIf="songs.length > 0" data-test-id="song-list">
+    <app-list-sorter></app-list-sorter>
+    <div *ngFor="let song of songs" class="card">
+      <div class="card-header">{{ song.title }}</div>
+      <div class="card-body">
+        <p>{{ song.title }} is by {{ song.artist }}</p>
+        <p>
+          This song is on the album {{ song.album || "(no album recorded)" }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    *ngIf="songs.length === 0"
+    class="alert alert-danger"
+    data-test-id="no-songs-warning"
+  >
+    <h3>Sorry! You have no songs! Add Some!</h3>
+  </div>
+</div>
